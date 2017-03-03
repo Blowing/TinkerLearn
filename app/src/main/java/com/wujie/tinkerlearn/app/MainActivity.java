@@ -1,7 +1,9 @@
-package com.wujie.tinkerlearn;
+package com.wujie.tinkerlearn.app;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.wujie.tinkerlearn.R;
 
 public class MainActivity extends AppCompatActivity {
 

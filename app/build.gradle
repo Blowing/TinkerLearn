@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 
-def javaVersion = JavaVersion.VERSION_1_8
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -18,13 +18,27 @@ android {
         buildConfigField "String", "PLATFORM",  "\"all\""
     }
 
-    compileOptions {
-        sourceCompatibility javaVersion
-        targetCompatibility javaVersion
-    }
+
     //recommend
     dexOptions {
         jumboMode = true
+    }
+
+    signingConfigs {
+        release {
+            try {
+                storeFile file("./keystore/release.keystore")
+                storePassword "textres"
+                keyAlias "testres"
+                keyPassword "textres"
+            } catch (ex) {
+                throw new InvalidUserCodeException(ex.toString())
+            }
+        }
+
+        debug {
+            storeFile file ("./keystore/debug.keystore")
+        }
     }
 
     buildTypes {
@@ -42,7 +56,6 @@ dependencies {
 
     compile("com.tencent.tinker:tinker-android-lib:${TINKER_VERSION}") { changing = true }
     provided("com.tencent.tinker:tinker-android-anno:${TINKER_VERSION}") { changing = true }
-
     compile "com.android.support:multidex:1.0.1"
 }
 
