@@ -18,7 +18,7 @@ import com.wujie.tinkerlearn.util.TinkerManager;
  * Created by wujie on 2017/3/3.
  *
  */
-@DefaultLifeCycle(application = "tinker.sample.android.app.SampleApplication",
+@DefaultLifeCycle(application = "com.wujie.tinkerlearn.app.SampleApplication",
         flags = ShareConstants.TINKER_ENABLE_ALL,
         loadVerifyFlag = false)
 public class SampleApplicationLike extends DefaultApplicationLike{

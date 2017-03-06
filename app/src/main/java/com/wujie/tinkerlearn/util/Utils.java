@@ -39,6 +39,9 @@ public class Utils {
         return background;
     }
 
+    public static void setBackground(boolean back) {
+        background = back;
+    }
     public static int checkForPatchRecover(long roomSize, int maxMemory) {
         if (Utils.isGooglePlay()) {
             return Utils.ERROR_PATCH_GOOGLEPLAY_CHANNEL;

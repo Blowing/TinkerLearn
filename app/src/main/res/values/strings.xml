@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">TinkerLearn</string>
+    <string name="app_name">Tinkerleanrsddd</string>
+    <string name="test_resource">I am in the base apk</string>
 </resources>
