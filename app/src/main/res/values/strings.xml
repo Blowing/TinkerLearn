@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Tinkerleanrsddd</string>
-    <string name="test_resource">I am in the base apk</string>
+    <string name="app_name">Tinjker</string>
+    <string name="test_resource">I am in the patch apk</string>
 </resources>

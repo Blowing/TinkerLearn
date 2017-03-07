@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.loadPatch:
                 TinkerInstaller.onReceiveUpgradePatch(getApplicationContext(),
-                        Environment.getExternalStorageDirectory().getAbsolutePath());
+                        Environment.getExternalStorageDirectory().getAbsolutePath()+"/path.apk");
                 break;
             case R.id.loadLibrary:
                 TinkerLoadLibrary.installNavitveLibraryABI(getApplicationContext(), "armeabi");
